@@ -1,11 +1,11 @@
-:root {
-    --cor-de-fundo: black
-    
-}
+<!DOCTYPE html>
+<html>
+<body>
 
-body {
-    background-color: var(--cor-de-fundo);
-    font-family: var(--fonte-principal);
-    font-size: 16px;
-    font-weight: 400;
-}
+<p>I am normal</p>
+<p style="color:red;">I am red</p>
+<p style="color:blue;">I am blue</p>
+<p style="font-size:50px;">Bruno Leonardo</p>
+
+</body>
+</html>
