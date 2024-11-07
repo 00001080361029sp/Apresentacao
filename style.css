@@ -7,8 +7,8 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(45deg, #000000, #353535); /* Fundo com gradiente */
-  color: #fff;
+  background-color: #000; /* Fundo preto */
+  color: #e0e0e0; /* Texto cinza claro */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,27 +18,28 @@ body {
 
 .apresentacao {
   width: 90%;
-  max-width: 800px;
+  max-width: 900px;
   height: 80%;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  background-color: #222; /* Cartão escuro */
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
   overflow: hidden;
   position: relative;
-  color: #333;
-  text-align: center;
+  padding: 20px;
+  color: #e0e0e0;
 }
 
 h1 {
-  font-size: 3rem;
-  color: #333;
+  font-size: 2.5rem;
   margin-bottom: 20px;
   font-weight: 700;
+  color: #fff; /* Título branco */
 }
 
 p, ul {
   font-size: 1.2rem;
   line-height: 1.6;
+  color: #bbb; /* Texto secundário mais claro */
 }
 
 ul {
@@ -49,15 +50,17 @@ ul {
 .slide {
   display: none;
   padding: 40px;
+  transition: opacity 0.3s ease;
 }
 
 .slide.active {
   display: block;
+  opacity: 1;
 }
 
 .controles {
   position: absolute;
-  bottom: 40px;
+  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -66,8 +69,8 @@ ul {
 }
 
 .btn-navegacao {
-  background-color: #000000;
-  color: white;
+  background-color: #4f4f4f; /* Cinza escuro */
+  color: #e0e0e0;
   border: none;
   padding: 15px;
   font-size: 1rem;
@@ -75,16 +78,16 @@ ul {
   cursor: pointer;
   transition: all 0.3s ease;
   width: 100px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .btn-navegacao:hover {
-  background-color: #000000;
+  background-color: #636363; /* Cinza mais claro no hover */
   transform: translateY(-2px);
 }
 
 .btn-navegacao:active {
-  background-color: #000000;
+  background-color: #787878;
   transform: translateY(2px);
 }
 
