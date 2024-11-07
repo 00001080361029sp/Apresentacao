@@ -1,83 +1,71 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slider de Imagens e Vídeos</title>
-    <style>
-        /* Estilo do contêiner principal */
-        .slider {
-            position: relative;
-            width: 80%;
-            max-width: 800px;
-            margin: auto;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-        }
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        /* Estilo dos slides */
-        .slides {
-            display: flex;
-            width: 500%;
-            transition: transform 0.8s ease;
-            animation: slide 20s infinite;
-        }
+/* Estilo básico do body */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f4f9;
+  color: #333;
+}
 
-        /* Definindo largura para cada slide */
-        .slide {
-            width: 100%;
-            flex: 1 0 100%;
-        }
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  width: 100%;
+  text-align: center;
+}
 
-        /* Imagem e vídeo em tela cheia dentro do slide */
-        .slide img,
-        .slide video {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
+h1 {
+  font-size: 2rem;
+}
 
-        /* Animação para alternar slides automaticamente */
-        @keyframes slide {
-            0% { transform: translateX(0%); }
-            20% { transform: translateX(0%); }
-            25% { transform: translateX(-100%); }
-            45% { transform: translateX(-100%); }
-            50% { transform: translateX(-200%); }
-            70% { transform: translateX(-200%); }
-            75% { transform: translateX(-300%); }
-            95% { transform: translateX(-300%); }
-            100% { transform: translateX(-400%); }
-        }
-    </style>
-</head>
-<body>
+/* Estilos das Seções */
+.section {
+  width: 80%;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-<div class="slider">
-    <div class="slides">
-        <!-- Slide 1: Imagem -->
-        <div class="slide">
-            <img src="sua-imagem1.jpg" alt="Slide de Imagem 1">
-        </div>
-        <!-- Slide 2: Vídeo -->
-        <div class="slide">
-            <video src="seu-video1.mp4" autoplay muted loop></video>
-        </div>
-        <!-- Slide 3: Imagem -->
-        <div class="slide">
-            <img src="sua-imagem2.jpg" alt="Slide de Imagem 2">
-        </div>
-        <!-- Slide 4: Vídeo -->
-        <div class="slide">
-            <video src="seu-video2.mp4" autoplay muted loop></video>
-        </div>
-        <!-- Slide 5: Imagem -->
-        <div class="slide">
-            <img src="sua-imagem3.jpg" alt="Slide de Imagem 3">
-        </div>
-    </div>
-</div>
+.section h2 {
+  color: #444;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
 
-</body>
-</html>
+.photos img {
+  width: 100%;
+  max-width: 300px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+/* Estilo do Vídeo */
+.videos video {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+}
+
+/* Estilo do Áudio */
+.music audio {
+  width: 100%;
+  max-width: 300px;
+}
+
+p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #555;
+}
