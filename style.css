@@ -1,11 +1,108 @@
-body {
-  color: rgb(170, 0, 0);
-  background: rgb(0, 11, 130);
+/* Resetando estilos padrões */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header {
-  border-bottom: solid 2px rgb(255, 64, 0);
-  padding: 20px;
-  font-size: 32px;
-  color: rgb(255, 64, 0);
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(45deg, #6a11cb, #2575fc); /* Fundo com gradiente */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.apresentacao {
+  width: 90%;
+  max-width: 800px;
+  height: 80%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  color: #333;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+p, ul {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.slide {
+  display: none;
+  padding: 40px;
+}
+
+.slide.active {
+  display: block;
+}
+
+.controles {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+}
+
+.btn-navegacao {
+  background-color: #2575fc;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-navegacao:hover {
+  background-color: #6a11cb;
+  transform: translateY(-2px);
+}
+
+.btn-navegacao:active {
+  background-color: #4a92f0;
+  transform: translateY(2px);
+}
+
+@media (max-width: 768px) {
+  .apresentacao {
+      height: 100%;
+  }
+
+  h1 {
+      font-size: 2rem;
+  }
+
+  p, ul {
+      font-size: 1rem;
+  }
+
+  .controles {
+      bottom: 20px;
+      width: 200px;
+  }
 }

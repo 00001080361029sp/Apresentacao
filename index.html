@@ -1,13 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apresentação</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="apresentacao">
+        <!-- Slide 1 -->
+        <div class="slide active">
+            <h1>Bem-vindo à Apresentação!</h1>
+            <p>Este é o primeiro slide, com uma introdução à nossa apresentação.</p>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="slide">
+            <h1>Sobre o Projeto</h1>
+            <p>Este projeto visa ensinar conceitos básicos de HTML e CSS de maneira prática e visual.</p>
+        </div>
 
-        <header>Apresentação</header>
-    
-        <h1>Bruno Leonardo</h1>
-        <p>Oi esta é minha apresentção</p>
-    
-    </body>
+        <!-- Slide 3 -->
+        <div class="slide">
+            <h1>Objetivos do Projeto</h1>
+            <ul>
+                <li>Compreender a estrutura do HTML</li>
+                <li>Estilizar páginas com CSS</li>
+                <li>Criar apresentações interativas</li>
+            </ul>
+        </div>
+
+        <!-- Controles de navegação -->
+        <div class="controles">
+            <button id="prev" class="btn-navegacao">Anterior</button>
+            <button id="next" class="btn-navegacao">Próximo</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
