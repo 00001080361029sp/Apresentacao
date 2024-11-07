@@ -1,111 +1,83 @@
-/* Resetando estilos padrões */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider de Imagens e Vídeos</title>
+    <style>
+        /* Estilo do contêiner principal */
+        .slider {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
 
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #000; /* Fundo preto */
-  color: #e0e0e0; /* Texto cinza claro */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden;
-}
+        /* Estilo dos slides */
+        .slides {
+            display: flex;
+            width: 500%;
+            transition: transform 0.8s ease;
+            animation: slide 20s infinite;
+        }
 
-.apresentacao {
-  width: 90%;
-  max-width: 900px;
-  height: 80%;
-  background-color: #222; /* Cartão escuro */
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
-  overflow: hidden;
-  position: relative;
-  padding: 20px;
-  color: #e0e0e0;
-}
+        /* Definindo largura para cada slide */
+        .slide {
+            width: 100%;
+            flex: 1 0 100%;
+        }
 
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  font-weight: 700;
-  color: #fff; /* Título branco */
-}
+        /* Imagem e vídeo em tela cheia dentro do slide */
+        .slide img,
+        .slide video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
 
-p, ul {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #bbb; /* Texto secundário mais claro */
-}
+        /* Animação para alternar slides automaticamente */
+        @keyframes slide {
+            0% { transform: translateX(0%); }
+            20% { transform: translateX(0%); }
+            25% { transform: translateX(-100%); }
+            45% { transform: translateX(-100%); }
+            50% { transform: translateX(-200%); }
+            70% { transform: translateX(-200%); }
+            75% { transform: translateX(-300%); }
+            95% { transform: translateX(-300%); }
+            100% { transform: translateX(-400%); }
+        }
+    </style>
+</head>
+<body>
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+<div class="slider">
+    <div class="slides">
+        <!-- Slide 1: Imagem -->
+        <div class="slide">
+            <img src="sua-imagem1.jpg" alt="Slide de Imagem 1">
+        </div>
+        <!-- Slide 2: Vídeo -->
+        <div class="slide">
+            <video src="seu-video1.mp4" autoplay muted loop></video>
+        </div>
+        <!-- Slide 3: Imagem -->
+        <div class="slide">
+            <img src="sua-imagem2.jpg" alt="Slide de Imagem 2">
+        </div>
+        <!-- Slide 4: Vídeo -->
+        <div class="slide">
+            <video src="seu-video2.mp4" autoplay muted loop></video>
+        </div>
+        <!-- Slide 5: Imagem -->
+        <div class="slide">
+            <img src="sua-imagem3.jpg" alt="Slide de Imagem 3">
+        </div>
+    </div>
+</div>
 
-.slide {
-  display: none;
-  padding: 40px;
-  transition: opacity 0.3s ease;
-}
-
-.slide.active {
-  display: block;
-  opacity: 1;
-}
-
-.controles {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: space-between;
-  width: 250px;
-}
-
-.btn-navegacao {
-  background-color: #4f4f4f; /* Cinza escuro */
-  color: #e0e0e0;
-  border: none;
-  padding: 15px;
-  font-size: 1rem;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  width: 100px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.btn-navegacao:hover {
-  background-color: #636363; /* Cinza mais claro no hover */
-  transform: translateY(-2px);
-}
-
-.btn-navegacao:active {
-  background-color: #787878;
-  transform: translateY(2px);
-}
-
-@media (max-width: 768px) {
-  .apresentacao {
-      height: 100%;
-  }
-
-  h1 {
-      font-size: 2rem;
-  }
-
-  p, ul {
-      font-size: 1rem;
-  }
-
-  .controles {
-      bottom: 20px;
-      width: 200px;
-  }
-}
+</body>
+</html>
