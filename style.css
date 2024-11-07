@@ -66,7 +66,7 @@ ul {
 }
 
 .btn-navegacao {
-  background-color: #2575fc;
+  background-color: #000000;
   color: white;
   border: none;
   padding: 15px;
@@ -79,12 +79,12 @@ ul {
 }
 
 .btn-navegacao:hover {
-  background-color: #6a11cb;
+  background-color: #000000;
   transform: translateY(-2px);
 }
 
 .btn-navegacao:active {
-  background-color: #4a92f0;
+  background-color: #000000;
   transform: translateY(2px);
 }
 
